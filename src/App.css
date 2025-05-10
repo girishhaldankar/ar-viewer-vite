@@ -1,0 +1,64 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+model-viewer::slotted(button[slot="ar-button"]) {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  z-index: 9999;
+}
+
+model-viewer .slot.ar-button {
+  display: block !important;  /* Force the button to always display */
+}
+model-viewer .slot.ar-button:not(.enabled) {
+  display: block !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.slot.ar-button {
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  display: var(--ar-button-display, block !important);
+}
